@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "00 - Verificar dataset",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/00_verificar_dataset.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "01 - Entrenar modelos",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/01_entrenar_modelos.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "02 - Probar modelos",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/02_probar_modelos.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "03 - Comparar con y sin enero",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/03_analizar_sensibilidad_enero.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "04 - Interfaz ACEPAT",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "${workspaceFolder}/app.py"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

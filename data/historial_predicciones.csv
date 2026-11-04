@@ -1,0 +1,1 @@
+fecha_hora_prediccion,codigo_socio,nombre_socio,dni,comite_sectorial,periodo_base,periodo_predicho,nivel_predicho,probabilidad_baja,probabilidad_media,probabilidad_alta,modelo,f1_macro_prueba,accuracy_prueba

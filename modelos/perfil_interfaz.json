@@ -1,0 +1,61 @@
+{
+  "categorias": {
+    "comite_sectorial": [
+      "ACAPCEAPAAH-T",
+      "ADEPALMA",
+      "ALIADOS COMERCIALES",
+      "APAIN",
+      "APAMIL",
+      "APPAI-B.O.",
+      "APRODEPAT",
+      "APUMHSA",
+      "ASAPAT",
+      "ASPAL",
+      "ASPALTRU",
+      "ASPAT",
+      "ASSUPTA",
+      "ELBER ALBAN DIAZ",
+      "HATUM PALMAS",
+      "PARAISO",
+      "SANTO CRISTO",
+      "VALLE DEL RIO CAÑUTILLO"
+    ],
+    "sexo": ["F", "M"]
+  },
+  "rangos_entrenamiento": {
+    "hectareas_produccion": {"min": 0.38, "max": 58.9},
+    "area_instalada_ha": {"min": 0.38, "max": 58.9},
+    "numero_parcelas_produccion": {"min": 0.0, "max": 9.0},
+    "edad_plantacion_anios": {"min": 2.0, "max": 26.0},
+    "produccion_mes_anterior_tn": {"min": 0.12, "max": 143.404},
+    "rendimiento_mes_anterior_tn_ha": {"min": 0.0160058203, "max": 23.4325},
+    "precipitacion_mes_anterior_mm": {"min": 23.3, "max": 551.6},
+    "precipitacion_acumulada_3_meses_mm": {"min": 112.9, "max": 1234.0},
+    "movimientos_fertilizante_mes_anterior": {"min": 0.0, "max": 13.0},
+    "unidades_fertilizante_mes_anterior": {"min": 0.0, "max": 940.0},
+    "monto_fertilizante_mes_anterior": {"min": 0.0, "max": 63914.0},
+    "tipos_fertilizante_mes_anterior": {"min": 0.0, "max": 7.0},
+    "numero_fumigaciones_mes_anterior": {"min": 0.0, "max": 7.0},
+    "horas_maquina_mes_anterior": {"min": 0.0, "max": 16.8},
+    "tanques_mes_anterior": {"min": 0.0, "max": 27.0},
+    "numero_plagas_mes_anterior": {"min": 0.0, "max": 2.0}
+  },
+  "etiquetas": {
+    "hectareas_produccion": "Hectáreas en producción",
+    "area_instalada_ha": "Área instalada",
+    "numero_parcelas_produccion": "Número de parcelas",
+    "edad_plantacion_anios": "Edad de la plantación",
+    "produccion_mes_anterior_tn": "Producción del mes anterior",
+    "rendimiento_mes_anterior_tn_ha": "Rendimiento del mes anterior",
+    "precipitacion_mes_anterior_mm": "Precipitación del mes anterior",
+    "precipitacion_acumulada_3_meses_mm": "Precipitación acumulada de tres meses",
+    "movimientos_fertilizante_mes_anterior": "Movimientos de fertilizante",
+    "unidades_fertilizante_mes_anterior": "Unidades de fertilizante",
+    "monto_fertilizante_mes_anterior": "Monto de fertilizante",
+    "tipos_fertilizante_mes_anterior": "Tipos de fertilizante",
+    "numero_fumigaciones_mes_anterior": "Número de fumigaciones",
+    "horas_maquina_mes_anterior": "Horas máquina",
+    "tanques_mes_anterior": "Tanques",
+    "numero_plagas_mes_anterior": "Número de plagas"
+  }
+}

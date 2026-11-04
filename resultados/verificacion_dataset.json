@@ -1,0 +1,33 @@
+{
+  "fecha_verificacion": "2026-08-09T02:48:03",
+  "poblacion_declarada": 10000,
+  "muestra_esperada": 7150,
+  "filas_en_excel": 7150,
+  "columnas_en_excel": 29,
+  "socios_anonimos": 572,
+  "registros_por_anio": {
+    "2025": 5402,
+    "2026": 1748
+  },
+  "duplicados_id_registro": 0,
+  "duplicados_socio_anio_mes": 0,
+  "faltantes_predictores": {
+    "area_instalada_ha": 12,
+    "edad_plantacion_anios": 26,
+    "produccion_mes_anterior_tn": 59,
+    "rendimiento_mes_anterior_tn_ha": 59,
+    "movimientos_fertilizante_mes_anterior": 450,
+    "unidades_fertilizante_mes_anterior": 450,
+    "monto_fertilizante_mes_anterior": 450,
+    "tipos_fertilizante_mes_anterior": 450,
+    "numero_fumigaciones_mes_anterior": 450,
+    "horas_maquina_mes_anterior": 450,
+    "tanques_mes_anterior": 450,
+    "numero_plagas_mes_anterior": 450
+  },
+  "problemas_bloqueantes": [],
+  "advertencias": [
+    "Hay valores faltantes en predictores. El pipeline los tratará mediante imputación y categorías de disponibilidad."
+  ],
+  "apto_para_modelado": true
+}

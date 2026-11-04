@@ -1,0 +1,134 @@
+{
+  "fecha_entrenamiento": "2026-08-02T00:08:45",
+  "archivo_excel": "Dataset_ACEPAT_ML_Anonimizado_7150.xlsx",
+  "hoja": "Muestra_7150",
+  "anio_entrenamiento": 2025,
+  "anio_prueba_reservada": 2026,
+  "registros_entrenamiento": 5402,
+  "registros_prueba_reservada": 1748,
+  "tercil_1": 0.9866666666666667,
+  "tercil_2": 1.669603524229075,
+  "clases": [
+    "BAJA",
+    "MEDIA",
+    "ALTA"
+  ],
+  "codificacion_clases": {
+    "BAJA": 0,
+    "MEDIA": 1,
+    "ALTA": 2
+  },
+  "predictores": [
+    "hectareas_produccion",
+    "area_instalada_ha",
+    "numero_parcelas_produccion",
+    "edad_plantacion_anios",
+    "produccion_mes_anterior_tn",
+    "rendimiento_mes_anterior_tn_ha",
+    "precipitacion_mes_anterior_mm",
+    "precipitacion_acumulada_3_meses_mm",
+    "movimientos_fertilizante_mes_anterior",
+    "unidades_fertilizante_mes_anterior",
+    "monto_fertilizante_mes_anterior",
+    "tipos_fertilizante_mes_anterior",
+    "numero_fumigaciones_mes_anterior",
+    "horas_maquina_mes_anterior",
+    "tanques_mes_anterior",
+    "numero_plagas_mes_anterior",
+    "mes_seno",
+    "mes_coseno",
+    "comite_sectorial",
+    "sexo",
+    "datos_fertilizantes_mes_anterior_disponibles",
+    "datos_fumigacion_mes_anterior_disponibles",
+    "historial_mes_anterior_disponible"
+  ],
+  "predictores_numericos": [
+    "hectareas_produccion",
+    "area_instalada_ha",
+    "numero_parcelas_produccion",
+    "edad_plantacion_anios",
+    "produccion_mes_anterior_tn",
+    "rendimiento_mes_anterior_tn_ha",
+    "precipitacion_mes_anterior_mm",
+    "precipitacion_acumulada_3_meses_mm",
+    "movimientos_fertilizante_mes_anterior",
+    "unidades_fertilizante_mes_anterior",
+    "monto_fertilizante_mes_anterior",
+    "tipos_fertilizante_mes_anterior",
+    "numero_fumigaciones_mes_anterior",
+    "horas_maquina_mes_anterior",
+    "tanques_mes_anterior",
+    "numero_plagas_mes_anterior",
+    "mes_seno",
+    "mes_coseno"
+  ],
+  "predictores_categoricos": [
+    "comite_sectorial",
+    "sexo",
+    "datos_fertilizantes_mes_anterior_disponibles",
+    "datos_fumigacion_mes_anterior_disponibles",
+    "historial_mes_anterior_disponible"
+  ],
+  "modo_rapido": false,
+  "version_python": "3.12.13",
+  "version_numpy": "2.3.5",
+  "version_pandas": "2.2.3",
+  "version_scikit_learn": "1.8.0",
+  "resultados_validacion": [
+    {
+      "modelo_clave": "regresion_logistica",
+      "modelo": "Regresión logística",
+      "f1_macro_entrenamiento": 0.5874975049224948,
+      "f1_macro_validacion": 0.5132193779724931,
+      "brecha_entrenamiento_validacion": 0.07427812695000169,
+      "mejores_parametros": "{\"modelo__C\": 0.01, \"modelo__class_weight\": \"balanced\"}",
+      "archivo_modelo": "modelo_regresion_logistica.joblib"
+    },
+    {
+      "modelo_clave": "arbol_decision",
+      "modelo": "Árbol de decisiones",
+      "f1_macro_entrenamiento": 0.6000574486679097,
+      "f1_macro_validacion": 0.5759228273063683,
+      "brecha_entrenamiento_validacion": 0.02413462136154132,
+      "mejores_parametros": "{\"modelo__class_weight\": null, \"modelo__max_depth\": 3, \"modelo__min_samples_leaf\": 1, \"modelo__min_samples_split\": 2}",
+      "archivo_modelo": "modelo_arbol_decision.joblib"
+    },
+    {
+      "modelo_clave": "random_forest",
+      "modelo": "Random Forest",
+      "f1_macro_entrenamiento": 1.0,
+      "f1_macro_validacion": 0.5828673045441268,
+      "brecha_entrenamiento_validacion": 0.41713269545587317,
+      "mejores_parametros": "{\"modelo__class_weight\": null, \"modelo__max_depth\": null, \"modelo__max_features\": \"sqrt\", \"modelo__min_samples_leaf\": 1, \"modelo__n_estimators\": 250}",
+      "archivo_modelo": "modelo_random_forest.joblib"
+    },
+    {
+      "modelo_clave": "svm",
+      "modelo": "SVM",
+      "f1_macro_entrenamiento": 0.6206105627697122,
+      "f1_macro_validacion": 0.5141160006879919,
+      "brecha_entrenamiento_validacion": 0.10649456208172026,
+      "mejores_parametros": "{\"modelo__C\": 0.5, \"modelo__class_weight\": \"balanced\", \"modelo__gamma\": \"scale\"}",
+      "archivo_modelo": "modelo_svm.joblib"
+    },
+    {
+      "modelo_clave": "gradient_boosting",
+      "modelo": "Gradient Boosting",
+      "f1_macro_entrenamiento": 0.6470278786394723,
+      "f1_macro_validacion": 0.581405406641426,
+      "brecha_entrenamiento_validacion": 0.06562247199804627,
+      "mejores_parametros": "{\"modelo__learning_rate\": 0.03, \"modelo__max_depth\": 2, \"modelo__min_samples_leaf\": 5, \"modelo__n_estimators\": 350}",
+      "archivo_modelo": "modelo_gradient_boosting.joblib"
+    },
+    {
+      "modelo_clave": "knn",
+      "modelo": "KNN",
+      "f1_macro_entrenamiento": 1.0,
+      "f1_macro_validacion": 0.5286815387743924,
+      "brecha_entrenamiento_validacion": 0.4713184612256076,
+      "mejores_parametros": "{\"modelo__n_neighbors\": 35, \"modelo__p\": 1, \"modelo__weights\": \"distance\"}",
+      "archivo_modelo": "modelo_knn.joblib"
+    }
+  ]
+}

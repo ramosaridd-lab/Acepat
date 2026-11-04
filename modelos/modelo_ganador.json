@@ -1,0 +1,10 @@
+{
+  "modelo_clave": "random_forest",
+  "modelo": "Random Forest",
+  "accuracy": 0.620137299771167,
+  "precision_macro": 0.6160303971829248,
+  "recall_macro": 0.615298359102554,
+  "f1_macro": 0.6155106748106217,
+  "criterio_seleccion": "Mayor F1 macro; desempate por Accuracy y Recall macro",
+  "archivo_modelo": "modelo_ganador.joblib"
+}

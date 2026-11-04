@@ -1,0 +1,7 @@
+﻿modelo_clave,modelo,f1_macro_entrenamiento,f1_macro_validacion,brecha_entrenamiento_validacion,mejores_parametros,archivo_modelo
+random_forest,Random Forest,1.0,0.5828673045441268,0.41713269545587317,"{""modelo__class_weight"": null, ""modelo__max_depth"": null, ""modelo__max_features"": ""sqrt"", ""modelo__min_samples_leaf"": 1, ""modelo__n_estimators"": 250}",modelo_random_forest.joblib
+gradient_boosting,Gradient Boosting,0.6470278786394723,0.581405406641426,0.06562247199804627,"{""modelo__learning_rate"": 0.03, ""modelo__max_depth"": 2, ""modelo__min_samples_leaf"": 5, ""modelo__n_estimators"": 350}",modelo_gradient_boosting.joblib
+arbol_decision,Árbol de decisiones,0.6000574486679097,0.5759228273063683,0.02413462136154132,"{""modelo__class_weight"": null, ""modelo__max_depth"": 3, ""modelo__min_samples_leaf"": 1, ""modelo__min_samples_split"": 2}",modelo_arbol_decision.joblib
+knn,KNN,1.0,0.5286815387743924,0.4713184612256076,"{""modelo__n_neighbors"": 35, ""modelo__p"": 1, ""modelo__weights"": ""distance""}",modelo_knn.joblib
+svm,SVM,0.6206105627697122,0.5141160006879919,0.10649456208172026,"{""modelo__C"": 0.5, ""modelo__class_weight"": ""balanced"", ""modelo__gamma"": ""scale""}",modelo_svm.joblib
+regresion_logistica,Regresión logística,0.5874975049224948,0.5132193779724931,0.07427812695000169,"{""modelo__C"": 0.01, ""modelo__class_weight"": ""balanced""}",modelo_regresion_logistica.joblib

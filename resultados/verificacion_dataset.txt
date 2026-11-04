@@ -1,0 +1,29 @@
+VERIFICACIÓN DEL DATASET ACEPAT
+======================================
+Población declarada: 10,000
+Muestra esperada: 7,150
+Filas encontradas: 7,150
+Columnas: 29
+Socios anónimos: 572
+Registros por año: {'2025': 5402, '2026': 1748}
+Apto para modelado: SÍ
+
+Problemas bloqueantes:
+- Ninguno
+
+Advertencias:
+- Hay valores faltantes en predictores. El pipeline los tratará mediante imputación y categorías de disponibilidad.
+
+Faltantes por predictor:
+- area_instalada_ha: 12
+- edad_plantacion_anios: 26
+- produccion_mes_anterior_tn: 59
+- rendimiento_mes_anterior_tn_ha: 59
+- movimientos_fertilizante_mes_anterior: 450
+- unidades_fertilizante_mes_anterior: 450
+- monto_fertilizante_mes_anterior: 450
+- tipos_fertilizante_mes_anterior: 450
+- numero_fumigaciones_mes_anterior: 450
+- horas_maquina_mes_anterior: 450
+- tanques_mes_anterior: 450
+- numero_plagas_mes_anterior: 450

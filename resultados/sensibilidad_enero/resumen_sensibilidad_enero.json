@@ -1,0 +1,38 @@
+{
+  "fecha_ejecucion": "2026-08-02T00:00:10",
+  "archivo_excel": "Dataset_ACEPAT_ML_Anonimizado_7150.xlsx",
+  "anio_entrenamiento": 2025,
+  "anio_prueba": 2026,
+  "registros_con_enero": 5402,
+  "registros_sin_enero": 4952,
+  "registros_enero_excluidos": 450,
+  "tercil_1_fijo": 0.9866666666666667,
+  "tercil_2_fijo": 1.669603524229075,
+  "criterio": "Los terciles y las ventanas de validación se mantienen fijos; solo se excluyen los registros de enero del entrenamiento.",
+  "ganadores_validacion": {
+    "con_enero": {
+      "modelo_clave": "random_forest",
+      "modelo": "Random Forest",
+      "f1_macro_validacion": 0.5828673045441268
+    },
+    "sin_enero": {
+      "modelo_clave": "random_forest",
+      "modelo": "Random Forest",
+      "f1_macro_validacion": 0.5802231005360636
+    }
+  },
+  "ganadores_prueba": {
+    "con_enero": {
+      "modelo_clave": "random_forest",
+      "modelo": "Random Forest",
+      "f1_macro": 0.6155106748106217,
+      "accuracy": 0.620137299771167
+    },
+    "sin_enero": {
+      "modelo_clave": "gradient_boosting",
+      "modelo": "Gradient Boosting",
+      "f1_macro": 0.5900844618119557,
+      "accuracy": 0.5955377574370709
+    }
+  }
+}
