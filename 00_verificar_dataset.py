@@ -1,3 +1,4 @@
+#realiza una verificacion previa antes de entrenar los modelos
 from __future__ import annotations
 
 import sys

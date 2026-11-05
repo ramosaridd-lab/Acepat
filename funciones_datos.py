@@ -126,7 +126,7 @@ def localizar_excel(ruta: str | Path | None = None) -> Path:
         f"Conserve el archivo esperado: {NOMBRE_EXCEL_ESPERADO}."
     )
 
-
+#lee el excel anonimizado y comprueba sus columnas 
 def cargar_dataset(ruta: str | Path | None = None) -> tuple[pd.DataFrame, Path]:
     ruta_excel = localizar_excel(ruta)
     try:
@@ -185,7 +185,7 @@ def agregar_variables_derivadas(df: pd.DataFrame) -> pd.DataFrame:
     )
     return df
 
-
+#clasificacion por terciles
 def calcular_terciles(rendimientos_entrenamiento: pd.Series) -> tuple[float, float]:
     serie = pd.to_numeric(rendimientos_entrenamiento, errors="coerce").dropna()
     if serie.empty:
