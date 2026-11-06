@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
-
-# Rutas del proyecto
+######
+# 1 Rutas del proyecto
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -16,8 +16,8 @@ LOGS_DIR = BASE_DIR / "logs"
 NOMBRE_EXCEL_ESPERADO = "Dataset_ACEPAT_ML_Anonimizado_7150.xlsx"
 HOJA_DATOS = "Muestra_7150"
 
-
-# Parámetros metodológicos aprobados para la tesis
+#####
+# 2 Parámetros metodológicos aprobados para la tesis
 POBLACION_DECLARADA = 10_000
 MUESTRA_ESPERADA = 7_150
 ANIO_ENTRENAMIENTO = 2025
@@ -37,7 +37,8 @@ CLASE_A_CODIGO = {clase: indice for indice, clase in enumerate(CLASES)}
 CODIGO_A_CLASE = {indice: clase for clase, indice in CLASE_A_CODIGO.items()}
 CODIGOS_CLASES = list(range(len(CLASES)))
 
-# No se incluyen produccion_tn ni rendimiento_tn_ha porque construyen la
+#####
+# 3 No se incluyen produccion_tn ni rendimiento_tn_ha porque construyen la
 # respuesta real del mes actual y producirían fuga de información.
 PREDICTORES_NUMERICOS = [
     "hectareas_produccion",

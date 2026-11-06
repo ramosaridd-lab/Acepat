@@ -1078,7 +1078,7 @@ def render_prediccion():
         type="primary",
         use_container_width=True,
     )
-
+    #1 
     if boton_predecir:
         try:
             entrada = construir_entrada_modelo(
@@ -1228,7 +1228,7 @@ def render_historial():
             file_name="historial_predicciones_acepat.csv",
             mime="text/csv",
         )
-
+#2 la vista de modelo lee los resultados ya almacenados y muestra las metricas del ganador
 def render_modelo():
     st.subheader("Información técnica del modelo utilizado")
     col_mod_1, col_mod_2, col_mod_3, col_mod_4 = st.columns(4)

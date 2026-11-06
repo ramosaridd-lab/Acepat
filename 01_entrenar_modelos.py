@@ -1,3 +1,4 @@
+#prepara la matriz de variables, la respuesta codificada y los dols de entrenamiento
 from __future__ import annotations
 
 import json
@@ -79,7 +80,8 @@ def main() -> int:
         print(f"Clases de entrenamiento: {y_train_texto.value_counts().to_dict()}")
         print(f"Codificación interna: {CLASE_A_CODIGO}")
         print(f"Separación guardada en: {ruta_separacion}")
-
+        
+#1 el bucle por nombres,modelos llama a entrenar_busqueda y conserva best_estimator_con joblib 
         resumen_validacion: list[dict] = []
         for clave, nombre in NOMBRES_MODELOS.items():
             print("\n" + "-" * 70)

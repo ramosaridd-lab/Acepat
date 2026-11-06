@@ -29,7 +29,7 @@ from funciones_modelos import (
     crear_folds_temporales,
     entrenar_busqueda,
 )
-
+#Analiza la sensibilidad del entreanmiento frente a la presencia de enero de 2025 
 
 SALIDA_DIR = RESULTADOS_DIR / "sensibilidad_enero"
 
@@ -102,6 +102,8 @@ def main() -> int:
     print("\nACEPAT ML - ANÁLISIS DE SENSIBILIDAD DE ENERO 2025")
     print("=" * 61)
     print(f"Modo de búsqueda: {'RÁPIDO' if MODO_RAPIDO else 'COMPLETO'}")
+
+    #Comparamos el apredizaje con y sin enero del entramiento para medir la sensibilidad temporal
 
     SALIDA_DIR.mkdir(parents=True, exist_ok=True)
     df, ruta_excel = cargar_dataset()

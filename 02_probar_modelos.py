@@ -31,7 +31,7 @@ from configuracion import (
 )
 from funciones_datos import cargar_dataset, preparar_entrenamiento_prueba
 from funciones_modelos import NOMBRES_MODELOS
-
+#evalua las clases predichas contra el conjunto de pruebas y define el ganador operativo
 
 def cargar_metadatos() -> dict:
     ruta = MODELOS_DIR / "metadatos_entrenamiento.json"
@@ -79,6 +79,7 @@ def main() -> int:
     resumen: list[dict] = []
     reportes: dict[str, pd.DataFrame] = {}
 
+    #1###
     for clave, nombre in NOMBRES_MODELOS.items():
         ruta_modelo = MODELOS_DIR / f"modelo_{clave}.joblib"
         if not ruta_modelo.exists():
@@ -188,6 +189,7 @@ def main() -> int:
             f"F1={metricas['f1_macro']:.4f}"
         )
 
+        #2##### El sistema selecciona el fayor F1 macro y usa Accuracy y Recall macro como desempates
     comparacion = pd.DataFrame(resumen).sort_values(
         ["f1_macro", "accuracy", "recall_macro"], ascending=False
     )

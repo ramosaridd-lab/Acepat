@@ -1,3 +1,4 @@
+#prepara entradas de usuario, ejecuta inferencia y almacena prediccion
 from __future__ import annotations
 
 import json
@@ -65,7 +66,7 @@ def cargar_json(ruta: Path) -> dict[str, Any]:
         raise FileNotFoundError(f"No se encontró el archivo requerido: {ruta}")
     return json.loads(ruta.read_text(encoding="utf-8"))
 
-
+#1 
 def cargar_recursos_modelo(
     base_dir: Path | None = None,
 ) -> tuple[Any, dict[str, Any], dict[str, Any], dict[str, Any]]:
@@ -78,7 +79,7 @@ def cargar_recursos_modelo(
             "No se encontró modelos/modelo_ganador.joblib. "
             "Ejecute primero 01_entrenar_modelos.py y 02_probar_modelos.py."
         )
-
+            #
     try:
         modelo = joblib.load(ruta_modelo)
     except Exception as exc:  # pragma: no cover - depende del entorno instalado
@@ -337,7 +338,7 @@ def _etiqueta_clase(valor: Any) -> str:
         return CODIGO_A_CLASE.get(int(texto), texto)
     return texto
 
-
+#2
 def ejecutar_prediccion(
     modelo: Any,
     entrada: pd.DataFrame,

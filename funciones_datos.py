@@ -125,7 +125,7 @@ def localizar_excel(ruta: str | Path | None = None) -> Path:
         f" - {nombres}\n"
         f"Conserve el archivo esperado: {NOMBRE_EXCEL_ESPERADO}."
     )
-
+##1
 #lee el excel anonimizado y comprueba sus columnas 
 def cargar_dataset(ruta: str | Path | None = None) -> tuple[pd.DataFrame, Path]:
     ruta_excel = localizar_excel(ruta)
@@ -172,7 +172,7 @@ def cargar_dataset(ruta: str | Path | None = None) -> tuple[pd.DataFrame, Path]:
         df[indicador] = df[indicador].fillna("NO").replace({"SÍ": "SI"})
     return df, ruta_excel
 
-
+#el uso de seno y coseno evita representar diciembre y enero como meses distantes en un eje lineal
 def agregar_variables_derivadas(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df["mes_seno"] = np.sin(2 * np.pi * df["mes"] / 12.0)
@@ -185,7 +185,8 @@ def agregar_variables_derivadas(df: pd.DataFrame) -> pd.DataFrame:
     )
     return df
 
-#clasificacion por terciles
+#2 clasificacion por terciles
+#Los cuantiles 1/3 y 2/3 se calculan unicamente sobre rendimiento de 2025 y definen BAJA, MEDIA y ALTA. 
 def calcular_terciles(rendimientos_entrenamiento: pd.Series) -> tuple[float, float]:
     serie = pd.to_numeric(rendimientos_entrenamiento, errors="coerce").dropna()
     if serie.empty:
@@ -205,6 +206,8 @@ def asignar_nivel_produccion(
         default=None,
     )
     return pd.Series(niveles, index=rendimiento.index, dtype="string")
+
+#3#### Se selecciona registros de 2025/2026, ordenada por fecha y aplica a ambos las clases con umbrales del entrenamiento
 def preparar_entrenamiento_prueba(
     df: pd.DataFrame,
 ) -> tuple[pd.DataFrame, pd.DataFrame, float, float]:
@@ -234,7 +237,8 @@ def preparar_entrenamiento_prueba(
     )
     return entrenamiento, prueba, q1, q2
 
-
+#mide tamaño, duplicados por registro/socio-periodo, valores imposibles y faltantes
+# con distincion entre bloqueantes y advertencias 
 def verificar_dataset(df: pd.DataFrame) -> dict[str, Any]:
     problemas: list[str] = []
     advertencias: list[str] = []

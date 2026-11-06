@@ -22,8 +22,8 @@ from configuracion import (
     PREDICTORES_NUMERICOS,
     SEMILLA,
 )
-
-
+###define los clasificadores, el preprocesamiento y la validacion temporal expansiva 
+#1 #####
 NOMBRES_MODELOS = {
     "regresion_logistica": "Regresión logística",
     "arbol_decision": "Árbol de decisiones",
@@ -33,7 +33,7 @@ NOMBRES_MODELOS = {
     "knn": "KNN",
 }
 
-
+#2 ### el pipeline garantiza transformaciones consistentes dentro de las etapas de entramiento y validacion 
 def crear_preprocesador(con_escalado: bool) -> ColumnTransformer:
     pasos_numericos: list[tuple[str, Any]] = [
         ("imputador", SimpleImputer(strategy="median", add_indicator=True))
@@ -208,7 +208,7 @@ def crear_folds_temporales(
             "Faltan meses requeridos para construir los folds temporales: "
             + ", ".join(map(str, meses_faltantes))
         )
-
+###3 
     planes = [
         (periodos[:4], periodos[4:6]),
         (periodos[:6], periodos[6:8]),
@@ -244,6 +244,8 @@ def entrenar_busqueda(
         raise KeyError(f"Modelo no reconocido: {clave_modelo}")
 
     spec = especificaciones[clave_modelo]
+
+    #4
     pipeline = Pipeline(
         [
             ("preprocesador", crear_preprocesador(spec["escalado"])),
